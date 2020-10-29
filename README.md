@@ -25,17 +25,16 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### 项目结构
 node_modules  依赖包
-public
-  favicon.icon  网站标题图片
-  index.html 应用入口，app注入节点
+public/favicon.icon  网站标题图片
+public/index.html 应用入口，app注入节点
 src 源代码
-  assets 静态文件
-  components 公共组件
-  hooks 常用的模块
-  App.vue 入口文件调用此模板创建app
-  main.ts 入口文件
-  shims-vue.d.ts typescript的声明文件
-  tsconfig.json ts配置文件
+src/assets 静态文件
+src/components 公共组件
+src/hooks 常用的模块
+src/App.vue 入口文件调用此模板创建app
+src/main.ts 入口文件
+src/shims-vue.d.ts typescript的声明文件
+src/tsconfig.json ts配置文件
 
 ### 新增一些函数
 main.ts createApp 创建应用
@@ -46,7 +45,7 @@ SelectGirl.vue
 ref 定义双向绑定的基本数据
 reactive 定义双向绑定的obj类型
 
-### 声明周期变化
+### 生命周期变化
 onBeforeMount
 onMounted
 onBeforeUpdate
