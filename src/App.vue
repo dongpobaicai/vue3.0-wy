@@ -1,17 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+    <h2>欢迎光临红浪漫洗浴中心</h2>
+    <div>请选择一位美女为你服务</div>
+    <select-girl></select-girl>
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+// typescript声明
+import { defineComponent } from "vue";
+import SelectGirl from "./components/SelectGirl.vue";
 
+// 定义组件，通过函数defineComponent
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
+    SelectGirl,
+  },
 });
 </script>
 
