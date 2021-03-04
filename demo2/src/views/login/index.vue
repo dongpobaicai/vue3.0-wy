@@ -4,7 +4,7 @@
   <van-button type="primary" @click="goLogin">跳转到首页</van-button>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, reactive, watch } from "vue";
 import { useRouter } from "vue-router";
 
 export default defineComponent({
@@ -13,6 +13,36 @@ export default defineComponent({
     const goLogin = () => {
       router.push("/");
     };
+
+    let test = reactive({
+      name: "321321",
+    });
+
+    test = reactive({
+      name: "fdafsad"
+    })
+
+    watch(test, () => {
+      console.log("update name");
+    });
+
+    test = reactive({
+      age: 6
+    })
+
+    watch(test, () => {
+      console.log('update age')
+    })
+
+    setTimeout(() => {
+      test.name = "bill";
+      test.age = 20
+    }, 0);
+    // test = {
+    //   age: 31231
+    // }
+
+    // console.log(test.name)
 
     return { goLogin };
   },

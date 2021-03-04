@@ -37,14 +37,14 @@ export default defineComponent({
     return {
       state,
       add,
-      goLogin
+      goLogin,
     };
   },
 });
 </script>
 <style>
 .text {
-  color: v-bind("state.color");
+  color: red;
 }
 .login {
   width: 100%;
